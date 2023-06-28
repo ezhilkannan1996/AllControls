@@ -1,4 +1,6 @@
-﻿Public Class DateTimePickerForm
+﻿Imports System.Windows.Forms.DataFormats
+
+Public Class DateTimePickerForm
     Dim Dte As DateTime
     Dim Format As String = "dd:MM:yyyy hh:mm:ss tt"
 
@@ -89,5 +91,63 @@
 
     Private Sub Btn_IsLeapYear_Click(sender As Object, e As EventArgs) Handles Btn_IsLeapYear.Click
         Lbl_OutPut_Display.Text = String.Format("Is leap year? : {0}", If(DateTime.IsLeapYear(Dte.Year), "Yes", "No").ToString())
+    End Sub
+
+    Private Sub Btn_MinValue_Click(sender As Object, e As EventArgs) Handles Btn_MinValue.Click
+        Lbl_OutPut_Display.Text = DateTime.MinValue 'Has doubt
+    End Sub
+
+    Private Sub Btn_MaxValue_Click(sender As Object, e As EventArgs) Handles Btn_MaxValue.Click
+        Lbl_OutPut_Display.Text = DateTime.MaxValue
+    End Sub
+
+    Private Sub Btn_TimeSpan_Click(sender As Object, e As EventArgs) Handles Btn_TimeSpan.Click
+        Dim TS As New TimeSpan
+        TS = DateTime.Now - Dte
+        Lbl_OutPut_Display.Text = String.Format("Current I am {0} years old and also I can tell this as {1} days or {2} hours old", Math.Floor(TS.Days / 365.255), TS.TotalDays, TS.TotalHours)
+    End Sub
+
+    Private Sub Btn_Format_d_Click(sender As Object, e As EventArgs) Handles Btn_Format_d.Click
+        Lbl_OutPut_Display.Text = Dte.ToString("d")
+    End Sub
+
+    Private Sub Btn_Formatt_D_Click(sender As Object, e As EventArgs) Handles Btn_Formatt_D.Click
+        Lbl_OutPut_Display.Text = Dte.ToString("D")
+    End Sub
+
+    Private Sub Btn_Format_F_Click(sender As Object, e As EventArgs) Handles Btn_Format_R.Click
+        Lbl_OutPut_Display.Text = Dte.ToString("R")
+    End Sub
+
+    Private Sub Btn_Format_y_Click(sender As Object, e As EventArgs) Handles Btn_Format_y.Click
+        Lbl_OutPut_Display.Text = Dte.ToString("y")
+    End Sub
+
+    Private Sub Btn_Format_f_Click_1(sender As Object, e As EventArgs) Handles Btn_Format_f.Click
+        Lbl_OutPut_Display.Text = Dte.ToString("f")
+    End Sub
+
+    Private Sub Btn_Formatt_F_Click(sender As Object, e As EventArgs) Handles Btn_Formatt_F.Click
+        Lbl_OutPut_Display.Text = Dte.ToString("F")
+    End Sub
+
+    Private Sub Btn_Format_t_Click(sender As Object, e As EventArgs) Handles Btn_Format_t.Click
+        Lbl_OutPut_Display.Text = Dte.ToString("t")
+    End Sub
+
+    Private Sub Btn_Formatt_T_Click(sender As Object, e As EventArgs) Handles Btn_Formatt_T.Click
+        Lbl_OutPut_Display.Text = Dte.ToString("T")
+    End Sub
+
+    Private Sub Btn_Format_g_Click(sender As Object, e As EventArgs) Handles Btn_Format_g.Click
+        Lbl_OutPut_Display.Text = Dte.ToString("g")
+    End Sub
+
+    Private Sub Btn_Formatt_G_Click(sender As Object, e As EventArgs) Handles Btn_Formatt_G.Click
+        Lbl_OutPut_Display.Text = Dte.ToString("G")
+    End Sub
+
+    Private Sub Btn_Format_M_Click(sender As Object, e As EventArgs) Handles Btn_Format_M.Click
+        Lbl_OutPut_Display.Text = Dte.ToString("M")
     End Sub
 End Class

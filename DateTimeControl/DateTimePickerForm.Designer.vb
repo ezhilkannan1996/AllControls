@@ -49,6 +49,20 @@ Partial Class DateTimePickerForm
         Btn_AddMonths = New Button()
         Btn_AddSeconds = New Button()
         Btn_IsLeapYear = New Button()
+        Btn_MinValue = New Button()
+        Btn_MaxValue = New Button()
+        Btn_TimeSpan = New Button()
+        Btn_Format_d = New Button()
+        Btn_Formatt_D = New Button()
+        Btn_Format_R = New Button()
+        Btn_Format_y = New Button()
+        Btn_Format_f = New Button()
+        Btn_Formatt_F = New Button()
+        Btn_Format_t = New Button()
+        Btn_Formatt_T = New Button()
+        Btn_Format_g = New Button()
+        Btn_Formatt_G = New Button()
+        Btn_Format_M = New Button()
         SuspendLayout()
         ' 
         ' DateTimePicker
@@ -60,7 +74,7 @@ Partial Class DateTimePickerForm
         DateTimePicker.Name = "DateTimePicker"
         DateTimePicker.Size = New Size(200, 23)
         DateTimePicker.TabIndex = 0
-        DateTimePicker.Value = New Date(1996, 6, 13, 0, 0, 0, 0)
+        DateTimePicker.Value = New Date(1996, 6, 13, 1, 1, 1, 0)
         ' 
         ' Btn_Date
         ' 
@@ -304,11 +318,151 @@ Partial Class DateTimePickerForm
         Btn_IsLeapYear.Text = "IsLeapYear"
         Btn_IsLeapYear.UseVisualStyleBackColor = True
         ' 
+        ' Btn_MinValue
+        ' 
+        Btn_MinValue.Location = New Point(93, 248)
+        Btn_MinValue.Name = "Btn_MinValue"
+        Btn_MinValue.Size = New Size(75, 23)
+        Btn_MinValue.TabIndex = 27
+        Btn_MinValue.Text = "MinValue"
+        Btn_MinValue.UseVisualStyleBackColor = True
+        ' 
+        ' Btn_MaxValue
+        ' 
+        Btn_MaxValue.Location = New Point(93, 277)
+        Btn_MaxValue.Name = "Btn_MaxValue"
+        Btn_MaxValue.Size = New Size(75, 23)
+        Btn_MaxValue.TabIndex = 28
+        Btn_MaxValue.Text = "MaxValue"
+        Btn_MaxValue.UseVisualStyleBackColor = True
+        ' 
+        ' Btn_TimeSpan
+        ' 
+        Btn_TimeSpan.Location = New Point(93, 306)
+        Btn_TimeSpan.Name = "Btn_TimeSpan"
+        Btn_TimeSpan.Size = New Size(75, 23)
+        Btn_TimeSpan.TabIndex = 29
+        Btn_TimeSpan.Text = "TimeSpan"
+        Btn_TimeSpan.UseVisualStyleBackColor = True
+        ' 
+        ' Btn_Format_d
+        ' 
+        Btn_Format_d.Location = New Point(93, 335)
+        Btn_Format_d.Name = "Btn_Format_d"
+        Btn_Format_d.Size = New Size(75, 23)
+        Btn_Format_d.TabIndex = 30
+        Btn_Format_d.Text = "Format d"
+        Btn_Format_d.UseVisualStyleBackColor = True
+        ' 
+        ' Btn_Formatt_D
+        ' 
+        Btn_Formatt_D.Location = New Point(93, 364)
+        Btn_Formatt_D.Name = "Btn_Formatt_D"
+        Btn_Formatt_D.Size = New Size(75, 23)
+        Btn_Formatt_D.TabIndex = 31
+        Btn_Formatt_D.Text = "Format D"
+        Btn_Formatt_D.UseVisualStyleBackColor = True
+        ' 
+        ' Btn_Format_R
+        ' 
+        Btn_Format_R.Location = New Point(93, 393)
+        Btn_Format_R.Name = "Btn_Format_R"
+        Btn_Format_R.Size = New Size(75, 23)
+        Btn_Format_R.TabIndex = 32
+        Btn_Format_R.Text = "Format R"
+        Btn_Format_R.UseVisualStyleBackColor = True
+        ' 
+        ' Btn_Format_y
+        ' 
+        Btn_Format_y.Location = New Point(93, 422)
+        Btn_Format_y.Name = "Btn_Format_y"
+        Btn_Format_y.Size = New Size(75, 23)
+        Btn_Format_y.TabIndex = 33
+        Btn_Format_y.Text = "Format y"
+        Btn_Format_y.UseVisualStyleBackColor = True
+        ' 
+        ' Btn_Format_f
+        ' 
+        Btn_Format_f.Location = New Point(93, 451)
+        Btn_Format_f.Name = "Btn_Format_f"
+        Btn_Format_f.Size = New Size(75, 23)
+        Btn_Format_f.TabIndex = 34
+        Btn_Format_f.Text = "Format f"
+        Btn_Format_f.UseVisualStyleBackColor = True
+        ' 
+        ' Btn_Formatt_F
+        ' 
+        Btn_Formatt_F.Location = New Point(93, 480)
+        Btn_Formatt_F.Name = "Btn_Formatt_F"
+        Btn_Formatt_F.Size = New Size(75, 23)
+        Btn_Formatt_F.TabIndex = 35
+        Btn_Formatt_F.Text = "Format F"
+        Btn_Formatt_F.UseVisualStyleBackColor = True
+        ' 
+        ' Btn_Format_t
+        ' 
+        Btn_Format_t.Location = New Point(93, 509)
+        Btn_Format_t.Name = "Btn_Format_t"
+        Btn_Format_t.Size = New Size(75, 23)
+        Btn_Format_t.TabIndex = 36
+        Btn_Format_t.Text = "Format t"
+        Btn_Format_t.UseVisualStyleBackColor = True
+        ' 
+        ' Btn_Formatt_T
+        ' 
+        Btn_Formatt_T.Location = New Point(93, 538)
+        Btn_Formatt_T.Name = "Btn_Formatt_T"
+        Btn_Formatt_T.Size = New Size(75, 23)
+        Btn_Formatt_T.TabIndex = 37
+        Btn_Formatt_T.Text = "Format T"
+        Btn_Formatt_T.UseVisualStyleBackColor = True
+        ' 
+        ' Btn_Format_g
+        ' 
+        Btn_Format_g.Location = New Point(93, 567)
+        Btn_Format_g.Name = "Btn_Format_g"
+        Btn_Format_g.Size = New Size(75, 23)
+        Btn_Format_g.TabIndex = 38
+        Btn_Format_g.Text = "Format g"
+        Btn_Format_g.UseVisualStyleBackColor = True
+        ' 
+        ' Btn_Formatt_G
+        ' 
+        Btn_Formatt_G.Location = New Point(93, 596)
+        Btn_Formatt_G.Name = "Btn_Formatt_G"
+        Btn_Formatt_G.Size = New Size(75, 23)
+        Btn_Formatt_G.TabIndex = 39
+        Btn_Formatt_G.Text = "Format G"
+        Btn_Formatt_G.UseVisualStyleBackColor = True
+        ' 
+        ' Btn_Format_M
+        ' 
+        Btn_Format_M.Location = New Point(174, 132)
+        Btn_Format_M.Name = "Btn_Format_M"
+        Btn_Format_M.Size = New Size(75, 23)
+        Btn_Format_M.TabIndex = 40
+        Btn_Format_M.Text = "Format M"
+        Btn_Format_M.UseVisualStyleBackColor = True
+        ' 
         ' DateTimePickerForm
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(800, 639)
+        Controls.Add(Btn_Format_M)
+        Controls.Add(Btn_Formatt_G)
+        Controls.Add(Btn_Format_g)
+        Controls.Add(Btn_Formatt_T)
+        Controls.Add(Btn_Format_t)
+        Controls.Add(Btn_Formatt_F)
+        Controls.Add(Btn_Format_f)
+        Controls.Add(Btn_Format_y)
+        Controls.Add(Btn_Format_R)
+        Controls.Add(Btn_Formatt_D)
+        Controls.Add(Btn_Format_d)
+        Controls.Add(Btn_TimeSpan)
+        Controls.Add(Btn_MaxValue)
+        Controls.Add(Btn_MinValue)
         Controls.Add(Btn_IsLeapYear)
         Controls.Add(Btn_AddSeconds)
         Controls.Add(Btn_AddMonths)
@@ -370,4 +524,18 @@ Partial Class DateTimePickerForm
     Friend WithEvents Btn_AddMonths As Button
     Friend WithEvents Btn_AddSeconds As Button
     Friend WithEvents Btn_IsLeapYear As Button
+    Friend WithEvents Btn_MinValue As Button
+    Friend WithEvents Btn_MaxValue As Button
+    Friend WithEvents Btn_TimeSpan As Button
+    Friend WithEvents Btn_Format_d As Button
+    Friend WithEvents Btn_Formatt_D As Button
+    Friend WithEvents Btn_Format_R As Button
+    Friend WithEvents Btn_Format_y As Button
+    Friend WithEvents Btn_Format_f As Button
+    Friend WithEvents Btn_Formatt_F As Button
+    Friend WithEvents Btn_Format_t As Button
+    Friend WithEvents Btn_Formatt_T As Button
+    Friend WithEvents Btn_Format_g As Button
+    Friend WithEvents Btn_Formatt_G As Button
+    Friend WithEvents Btn_Format_M As Button
 End Class
