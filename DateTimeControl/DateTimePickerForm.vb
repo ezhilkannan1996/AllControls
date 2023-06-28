@@ -88,6 +88,6 @@
     End Sub
 
     Private Sub Btn_IsLeapYear_Click(sender As Object, e As EventArgs) Handles Btn_IsLeapYear.Click
-        Lbl_OutPut_Display.Text = String.Format("Is leap year? : {0}", If(DateTime.IsLeapYear(Dte.Year), True, False).ToString())
+        Lbl_OutPut_Display.Text = String.Format("Is leap year? : {0}", If(DateTime.IsLeapYear(Dte.Year), "Yes", "No").ToString())
     End Sub
 End Class
